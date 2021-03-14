@@ -14,7 +14,7 @@ void sortArray(int values[], int size) {
 		int minIndex = i;
 		//A second for loop here allows for sorting while on a single index before the loop moves onto a
 		//Second iteration for the i value.
-		//Current algorithm would swap through every single smaller value, whihc would make the code slower...
+		//Current algorithm would swap through every single smaller value, which would make the code slower...
 		for (int j = i; j < size; j++) {
 			if (values[j] < minValue) {
 				minValue = values[j];
@@ -29,41 +29,6 @@ void sortArray(int values[], int size) {
 	}
 }
 
-/*
-int writeFile(int numCount, int values[])
-{
-	ofstream fileWrite;
-	fileWrite.open("numFile.txt");
-	int inputN;
-
-	for (int i = 0; i < numCount; i++)
-	{
-		inputN = values[i];
-		fileWrite << inputN << endl;
-	}
-
-	fileWrite.close();
-	return 0;
-}
-*/
-
-/*
-int readFile(int size, int values[])
-{
-	ifstream fileRead;
-	fileRead.open("numFile.txt");
-	int numInput;
-	int number = 0;
-
-	while (fileRead >> values[number] && number < size)
-	{
-		number++;
-	}
-
-	fileRead.close();
-	return number;
-}
-*/
 
 int writeFile(int numCount, int values[], string n)
 {
