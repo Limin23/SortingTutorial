@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 #include "method.h"
 using namespace std;
 
@@ -28,7 +29,7 @@ void sortArray(int values[], int size) {
 	}
 }
 
-
+/*
 int writeFile(int numCount, int values[])
 {
 	ofstream fileWrite;
@@ -44,14 +45,46 @@ int writeFile(int numCount, int values[])
 	fileWrite.close();
 	return 0;
 }
+*/
 
-
-
+/*
 int readFile(int size, int values[])
 {
 	ifstream fileRead;
 	fileRead.open("numFile.txt");
 	int numInput;
+	int number = 0;
+
+	while (fileRead >> values[number] && number < size)
+	{
+		number++;
+	}
+
+	fileRead.close();
+	return number;
+}
+*/
+
+int writeFile(int numCount, int values[], string n)
+{
+	ofstream fileWrite;
+	fileWrite.open(n);
+	int inputN;
+
+	for (int i = 0; i < numCount; i++)
+	{
+		inputN = values[i];
+		fileWrite << inputN << endl;
+	}
+
+	fileWrite.close();
+	return 0;
+}
+
+int readFile(int size, int values[], string n)
+{
+	ifstream fileRead;
+	fileRead.open(n);
 	int number = 0;
 
 	while (fileRead >> values[number] && number < size)
