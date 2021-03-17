@@ -12,9 +12,6 @@ void sortArray(int values[], int size) {
 	for (int i = 0; i < size; i++) {
 		int minValue = values[i];
 		int minIndex = i;
-		//A second for loop here allows for sorting while on a single index before the loop moves onto a
-		//Second iteration for the i value.
-		//Current algorithm would swap through every single smaller value, which would make the code slower...
 		for (int j = i; j < size; j++) {
 			if (values[j] < minValue) {
 				minValue = values[j];
