@@ -14,13 +14,7 @@ int main(int argc, char* argv[]) {
 	int values[SIZE];
 	int numCount, stringL, repS;
 	string h = argv[1];
-	string add = "Results.txt";
-	stringL = h.length();
-	repS = stringL - 4;
-	string results;
-
-	results = h;
-	results.replace(repS, 4, add);
+	string n = argv[2];
 
 	cout << "Reading the file: " << h << endl;
 	numCount = readFile(SIZE, values, h);
@@ -32,7 +26,7 @@ int main(int argc, char* argv[]) {
 
 	sortArray(values, numCount);
 
-	writeFile(numCount, values, results);
+	writeFile(numCount, values, n);
 	
 	return 0;
 }
